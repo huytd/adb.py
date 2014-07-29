@@ -1,35 +1,35 @@
-== adb.py
+##adb.py
 
 Write your Android custom debug script easily with Python
 
-== How to use
+###How to use
 
-First, you need to import *adb.py* library
+First, you need to import **adb.py** library
 
-'''python
+```python
 from adb import ADB
-'''
+```
 
-Then, create your *debug* object
+Then, create your **debug** object
 
-'''python
+```python
 debug = ADB()
-'''
+```
 
-After you created *debug* object, you can use it to execute adb commands.
+After you created **debug** object, you can use it to execute adb commands.
 
-For example:
+###Examples
 
-*List all connected devices*
+**List all connected devices**
 
-'''python
+```python
 print debug.devices()
-'''
+```
 
-*Click POWER button to turn on screen*
+**Click POWER button to turn on screen**
 
-'''python
+```python
 debug.call("shell input keyevent 26")
-'''
+```
 
 (...)

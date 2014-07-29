@@ -85,3 +85,7 @@ If you want to set the recording time, add a time parameter in seconds
 ```python
 debug.screenRecord(("60", "/sdcard/record/output.mp4"))
 ```
+**Take screenshot and save to local**
+```python
+debug.screenShot("D:/saved.png")
+```

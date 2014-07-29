@@ -41,10 +41,10 @@ class ADB(object):
         result = self.call("shell pm clear " + package)
         return result
 
-    def shell(self):
-        result = self.call("shell")
+    def shell(self, command):
+        result = self.call("shell " + command)
         return result
-
+        
     def kill(self, package):
         result = self.call("kill " + package)
         return result
@@ -75,3 +75,8 @@ class ADB(object):
         elif params.length == 2:
             result = self.call("shell screenrecord --time-limit " + params[0] + " " + params[1])
         return result
+
+    def screenShot(self, output):
+        self.call("shell screencap -p /sdcard/temp_screen.png")
+        self.get("/sdcard/temp_screen.png", output)
+        self.call("shell rm /sdcard/temp_screen.png")

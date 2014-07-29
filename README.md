@@ -59,13 +59,9 @@ debug.start(("com.gamarist.murimuri","MainActivity"))
 ```python
 debug.kill("com.gamarist.murimuri")
 ```
-**Start shell**
+**Execute shell command**
 ```python
-debug.shell()
-```
-from now, you can call shell function directly, for example:
-```python
-debug.call("input swipe 50 50 200 50")
+debug.shell("input swipe 50 50 200 50")
 ```
 **Change screen resolution**
 This is useful to test your application in multiple screen size

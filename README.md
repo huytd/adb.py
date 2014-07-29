@@ -1,6 +1,8 @@
 ##adb.py
 Write your Android custom debug script easily with Python
 
+![Python ADB](http://i.imgur.com/1Ox9ilr.png?1)
+
 ###How to use
 First, you need to import **adb.py** library
 ```python

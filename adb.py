@@ -25,8 +25,12 @@ class ADB(object):
         result = self.call("pull " + fr + " " + to)
         return result
 
-    def install(self, apk, param):
-        result = self.call("install " + param + " " + apk)
+    def install(self, param):
+        data = param.split()
+        if data.length == 1:
+            result = self.call("install " + param[0])
+        elif data.length == 2:
+            result = self.call("install " + param[0] + " " + param[1])
         return result
 
     def uninstall(self, package):
@@ -57,11 +61,11 @@ class ADB(object):
         return result
 
     def screen(self, res):
-        result = self.call("display-size " + res)
+        result = self.call("am display-size " + res)
         return result
 
     def dpi(self, dpi):
-        result = self.call("display-density " + dpi)
+        result = self.call("am display-density " + dpi)
         return result
 
     def screenRecord(self, param):
